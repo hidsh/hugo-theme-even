@@ -9,6 +9,14 @@
     font-size: $logo-font-size;
     font-family: $logo-font-family;
   }
+
+  .description {
+    font-family: $logo-font-family;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
 }
 
 @include max-screen() {

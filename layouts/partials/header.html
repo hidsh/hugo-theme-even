@@ -1,9 +1,9 @@
 <div class="logo-wrapper">
   <a href="{{ "/" | relLangURL }}" class="logo">
     {{- if .Site.Params.logoTitle -}}
-      {{ .Site.Params.logoTitle }}
+      &#9904; {{ .Site.Params.logoTitle }}
     {{- else -}}
-      {{ .Site.Title }}
+      &#9904; {{ .Site.Title }}
     {{- end -}}
   </a>
 </div>
@@ -17,3 +17,12 @@
     {{- end }}
   </ul>
 </nav>
+
+<div class="logo-wrapper">
+  <p class="description">
+    {{- if .Site.Params.description -}}
+      {{ .Site.Params.description }}
+    {{- end -}}
+  </p>
+</div>
+

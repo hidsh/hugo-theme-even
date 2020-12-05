@@ -1,5 +1,5 @@
 .post-header {
-  margin-bottom: 20px;
+  margin-bottom: 0.4em;
 
   .post-title {
     margin: 0;
@@ -18,6 +18,11 @@
 
     .post-time {
       font-size: 15px;
+      margin-right: 1em;
+
+      a {
+          color: #c05b4d;
+      }
     }
 
     .post-category {

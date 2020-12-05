@@ -5,7 +5,14 @@
       <h1 class="post-title">&#128128; {{ .Title }}</h1>
 
       <div class="post-meta">
-        <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        <span class="post-time">&#128467;{{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        <span class="post-time">
+          {{ with .Params.tags -}}
+            &#127991;{{ range . -}}
+              <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/" class="post-time">{{ . }}</a>
+            {{ end -}}
+          {{- end -}}
+        </span>
         {{ with .Params.categories -}}
           <div class="post-category">
             {{ range . -}}
@@ -42,6 +49,7 @@
     {{- partial "post/reward.html" . -}}
 
     <footer class="post-footer">
+    <!--
       {{ with .Params.tags -}}
         <div class="post-tags">
           {{ range . -}}
@@ -49,9 +57,9 @@
           {{ end -}}
         </div>
       {{- end -}}
-
+      -->
       <!-- Post Pagination -->
-      <!-- <nav class="post-nav">
+      <nav class="post-nav">
         {{ with .NextInSection -}}
           <a class="prev" href="{{ .RelPermalink }}">
             <i class="iconfont icon-left"></i>
@@ -66,7 +74,7 @@
             <i class="iconfont icon-right"></i>
           </a>
         {{- end }}
-      </nav> -->
+      </nav>
     </footer>
   </article>
 {{- end }}

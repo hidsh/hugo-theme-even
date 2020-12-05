@@ -52,6 +52,24 @@
     }
   }
 
+  h2 {
+      margin-bottom: 0;
+      font-weight: bolder;
+  }
+
+  p {
+      margin: 0 0 0 2em;
+  }
+
+  ul {
+      margin: 0 0 18px 0;
+      li {
+          p {
+              margin: 0;
+          }
+      }
+  }
+
   blockquote {
     margin: 2em 0;
     padding: 10px 20px;
@@ -63,6 +81,7 @@
 
     p {
       margin: 0;
+      margin-left: 2em;
     }
   }
 
@@ -99,13 +118,13 @@
   @import 'admonition';
 
   .post-summary {
-    margin-bottom: 1em;
+    margin-bottom: 0.1em;
   }
 
   .read-more {
     .read-more-link {
       color: $theme-color;
-      font-size: 1.1em;
+      font-size: 0.9em;
       font-family: $global-serif-font-family;
     
       &:hover {
